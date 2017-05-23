@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#btnSend').click(function(){
+			$.post('../business/bsnsCat.php',{txtAddress:$('#txtAddress').val(),txtCity:$('#txtCity').val(),txtFirstName:$('#txtFirstName').val(),txtLastName:$('#txtLastName').val(),iPersonId:$('#iPersonId').val()},function(respuesta){
+					alert(respuesta);
+			});
+		});
+
+
+
+		//alert('Mensaje desde cat.html');
+	});
+</script>
+   <label>Direccio</label>	
+	<input type="text" id="txtAddress"/>
+   <label>Ciudad</label>
+	<input type="text" id="txtCity"/>
+   <label>Nombre</label>>
+	<input type="text" id="txtFirstName"/>
+   <label>Apellido</label>
+	<input type="text" id="txtLastName"/>
+   <label>Identificador</label>
+	<input type="text" id="iPersonId"/>
+    <input type="button" id="btnSend" value="Enviar"/>
+</body>
+</html>
