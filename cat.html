@@ -8,9 +8,10 @@
 <script>
 	$(document).ready(function(){
 		$('#btnSend').click(function(){
-			$.post('../business/bsnsCat.php',{txtAddress:$('#txtAddress').val(),txtCity:$('#txtCity').val(),txtFirstName:$('#txtFirstName').val(),txtLastName:$('#txtLastName').val(),iPersonId:$('#iPersonId').val()},function(respuesta){
+			/*$.post('../business/bsnsCat.php',{txtAddress:$('#txtAddress').val(),txtCity:$('#txtCity').val(),txtFirstName:$('#txtFirstName').val(),txtLastName:$('#txtLastName').val(),iPersonId:$('#iPersonId').val()},function(respuesta){
 					alert(respuesta);
-			});
+			});*/
+			alert('txtAddress: ' + $('#txtAddress').val() + ', txtCity: ' + $('#txtCity').val() + ', txtFirstName: ' + $('#txtFirstName').val() + ', txtLastName: ' + $('#txtLastName').val() + ', iPersonId: ' + $('#iPersonId').val());
 		});
 
 
